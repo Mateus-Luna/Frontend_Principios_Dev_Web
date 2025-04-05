@@ -9,5 +9,21 @@
     "dev:fullstack": "concurrently \"npm run dev\" \"cd ../Projeto-PrincipiosWeb && mvn spring-boot:run\"",
     "start": "react-scripts start",
     "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1"
   }
 }

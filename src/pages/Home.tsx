@@ -45,11 +45,17 @@ export default function Home() {
 
       <main className="content">
         <div className="products">
-          {[...Array(6)].map((_, index) => (
-            <div className="product" key={index}>
-              <div className="image-placeholder">Imagem</div>
-              <p>Produto {index + 1}</p>
-            </div>
+          {products.map((product) => (
+            <Link
+              key={product.id}
+              to={`/produto/${product.id}`}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <div className="product">
+                <div className="image-placeholder">Imagem</div>
+                <p>{product.nome}</p>
+              </div>
+            </Link>
           ))}
         </div>
 

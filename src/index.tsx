@@ -1,9 +1,12 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 //import App from './App';
 //import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Cart } from "./pages/Cart";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,7 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Cart />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/carrinho" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

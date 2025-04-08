@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../services/api";
 import ProductCard from "../components/ProductCard";
 
+const CarrinhoIcon = FaShoppingCart as unknown as React.FC;
+
 export default function Home() {
   const [products, setProducts] = useState<
     Array<{ id: number; nome: string; preco: number }>
@@ -29,7 +31,7 @@ export default function Home() {
           <ul className="nav-links">
             <li>Produtos</li>
             <li className="cart">
-              Carrinho <FaShoppingCart />
+              Carrinho <CarrinhoIcon />
             </li>
             <li>Login</li>
           </ul>

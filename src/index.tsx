@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 //import App from './App';
 //import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import Login from "./pages/Login";
+import { Cart } from "./pages/Cart";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Login />
+      <Cart />
     </BrowserRouter>
   </React.StrictMode>
 );

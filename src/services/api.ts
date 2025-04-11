@@ -16,12 +16,11 @@ export const getProducts = async () => {
 
   return response;
 };
-//export const getProductById = (id: number) => api.get(`/products/${id}`);
 export const getProductById = (id: number) => api.get(`/products/${id}`);
 
 export const addToCart = (productId: number, quantity: number) => 
-  api.post('/carrinho', { productId, quantity });
+  api.post('/cart', { productId, quantity });
 export const login = (email: string, password: string) => 
   api.post('/login', { email, password });
 export const register = (userData: { nome: string; email: string; senha: string }) => 
-  api.post('/registro', userData);
+  api.post('/register', userData);

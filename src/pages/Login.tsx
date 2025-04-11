@@ -60,6 +60,9 @@ export default function Login() {
         <a href="#" className="forgot-password">
           Esqueci minha senha
         </a>
+<div className="register-option">
+  <p>Não tem uma conta? <a onClick={() => navigate("/register")}>Cadastre-se</a></p>
+</div>
       </div>
     </div>
   );

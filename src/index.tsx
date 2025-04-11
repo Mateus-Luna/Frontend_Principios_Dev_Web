@@ -8,6 +8,7 @@ import { Cart } from "./pages/Cart";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { ProductDetails } from "./pages/ProductDetails";
+import Register from './pages/register';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,6 +21,8 @@ root.render(
         <Route path="/carrinho" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/produto/:id" element={<ProductDetails />} />
+        <Route path="/register" element={<Register />} />
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

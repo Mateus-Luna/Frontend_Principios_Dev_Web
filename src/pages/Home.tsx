@@ -10,7 +10,7 @@ const CarrinhoIcon = FaShoppingCart as unknown as React.FC;
 
 export default function Home() {
   const [products, setProducts] = useState<
-    Array<{ id: number; nome: string; preco: number }>
+    Array<{ id: number; name: string; price: number }>
   >([]);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Home() {
             >
               <div className="product">
                 <div className="image-placeholder">Imagem</div>
-                <p>{product.nome}</p>
+                <p>{product.name}</p>
               </div>
             </Link>
           ))}

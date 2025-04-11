@@ -11,8 +11,14 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export const getProducts = () => api.get('/produtos');
-export const getProductById = (id: number) => api.get(`/produtos/${id}`);
+export const getProducts = async () => {
+  const response = await axios.get(`${api}/products`); // Endpoint deve bater com o backend
+
+  return response;
+};
+//export const getProductById = (id: number) => api.get(`/products/${id}`);
+export const getProductById = (id: number) => api.get(`/products/${id}`);
+
 export const addToCart = (productId: number, quantity: number) => 
   api.post('/carrinho', { productId, quantity });
 export const login = (email: string, password: string) => 
